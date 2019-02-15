@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> 
+  <title>Face Detection</title> 
+  <link rel="stylesheet" href="../css/style.css" /> 
+ </head> 
+ <body> 
+  <div class="invisible"> 
+   <video id="video" class="hidden"></video> 
+   <input type="checkbox" id="face" name="classifier" value="face" checked="" /> 
+   <label for="face">face</label> 
+  </div> 
+  <div id="container"> 
+   <span id="info"><em>Camera Is Being Prepared...</em></span> 
+   <canvas class="center-block" id="canvasOutput" width="450" height="450"> 
+   </canvas> 
+  </div> 
+  <div class="showCapture"> 
+   <canvas class="facecapture" id="clip" width="300" height="300"></canvas>
+  </div> 
+  <div class="uploadapp">
+    ImageUpload:&nbsp; 
+   <input id="userface" type="file" onchange="preview(this)" /> 
+   <div id="preview"></div> 
+   <div class="btnGru"> 
+    <input type="button" id="btnClick" value="Face Certify" /> 
+    <input type="button" id="idClick" value="ID Card Certify" /> 
+   </div> 
+  </div> 
+  <div id="loading"></div> 
+  <script src="../libs/adapter-latest.js"></script> 
+  <script src="../libs/stats.min.js"></script> 
+  <script src="../libs/dat.gui.min.js"></script> 
+  <script src="../libs/utils.js"></script> 
+  <script>
+var featuresReady = checkFeatures(document.getElementById("info"), {webrtc: true, wasm: true});
+</script> 
+  <script src="js/jquery-3.2.1.js"></script> 
+  <script src="js/index.js"></script> 
+  <script>
+var Module = {
+  wasmBinaryFile: '../../build/wasm/opencv_js.wasm',
+  preRun: [function() { Module.FS_createPreloadedFile('/', 'haarcascade_frontalface_default.xml', '../data/haarcascade_frontalface_default.xml', true, false);
+  }],
+  _main: function() {opencvIsReady();}
+};
+</script> 
+  <script async="" src="../../build/wasm/opencv.js"></script>  
+ </body>
+</html>

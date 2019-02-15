@@ -1,0 +1,78 @@
+body {
+  font: 25px 'Lucida Grande', sans-serif;
+  /*background: url('bg.png');*/
+}
+
+#info {  
+  display:block;
+  color:black;
+  margin-bottom:1px;
+  text-align:center;
+  border-bottom:1px solid black;
+}
+
+#container {
+  /*border: 1px solid black;*/
+  float: left;
+  display:inline;
+  margin-top: 20px;
+  margin-left: 1%;
+}
+.center-block {
+  display: block;
+  margin: auto;
+}
+
+.showCapture{
+  border: 1px dashed black;
+  display: inline-block;
+  float: left;
+  margin-top: 7%;
+  margin-left: 4%;
+}
+.facecapture{
+}
+
+.invisible {
+  display: none;
+}
+
+.uploadapp {
+  font: 20px 'Lucida Grande', sans-serif;
+  width: 430px;
+  border: 1px dashed black;
+  display:inline;
+  float: right;
+  margin-right: 16%;
+  margin-top: 1%;
+}
+
+.btnGru{
+ margin-bottom: 1px;
+ display: inline;
+ float: right;
+}
+
+#loading{
+  font: 90px 'Lucida Grande', sans-serif;
+  text-align: center;
+  vertical-align:middle;
+  border: 1px dashed black;
+  width: 83%;
+  height: 170px;
+  line-height:170px;
+  float: left;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+#preview{
+   text-align: center;
+   vertical-align:middle;
+}
+
+#preview img{
+   margin-top: 1px;
+   max-width: 100%;
+   max-height: 100%;
+}
